@@ -3,7 +3,11 @@ The script was intended for RAD or ddRAD data, which do not usually have cM or p
 
 ______________________________________________________________________________________________________________________
 
-Usage: `phylip2eigenstrat.py -f [--infile] *.phylip -i [--ind <ind outfile>] *.ind -s [--snp <snp outfile>] *.snp`  
+Usage:
+
+```
+phylip2eigenstrat.py -f [--infile] *.phylip -i [--ind <ind outfile>] *.ind -s [--snp <snp outfile>] *.snp
+```
 
 
 The only required command-line flag is -f. If -i and -s are not specified, default = out.ind, out.snp    
