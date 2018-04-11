@@ -26,6 +26,4 @@ Example PHYLIP and .geno datasets were downloaded from the Dryad repository. The
 
 Dryad data package:
 
-> Prates I, Xue AT, Brown JL, Alvarado-Serrano DF, Rodrigues MT, Hickerson MJ, Carnaval AC. (2016). 
-> Data from: Inferring responses to climate dynamics from historical demography in neotropical forest lizards. 
-> Dryad Digital Repository. https://doi.org/10.5061/dryad.2v1p6
+> Prates I, Xue AT, Brown JL, Alvarado-Serrano DF, Rodrigues MT, Hickerson MJ, Carnaval AC. (2016). Data from: Inferring responses to climate dynamics from historical demography in neotropical forest lizards. Dryad Digital Repository. https://doi.org/10.5061/dryad.2v1p6
