@@ -3,10 +3,10 @@ The script was intended for RAD or ddRAD data, which do not usually have cM or p
 
 ______________________________________________________________________________________________________________________
 
-Usage: `phylip2eigenstrat.py -f [--infile] *.phylip -i [--ind <ind outfile>] *.ind -s [--snp <snp outfile>] *.snp`
+Usage: `phylip2eigenstrat.py -f [--infile] *.phylip -i [--ind <ind outfile>] *.ind -s [--snp <snp outfile>] *.snp`  
 
 
-The only required command-line flag is -f. If -i and -s are not specified, default = out.ind, out.snp  
+The only required command-line flag is -f. If -i and -s are not specified, default = out.ind, out.snp    
 
 This script requires a phylip file as input to obtain the sample names and number of loci  
 The Phylip file should be from the same run as the .geno file to ensure the same number of loci  
@@ -18,7 +18,7 @@ AdmixTools and Eigensoft require a third input file that is produced in pyRAD: .
 Please note that AdmixTools requires the three input files to have .geno, .snp, and .ind extensions.  
 
 
-## Citations
+## Citations  
 
 Example PHYLIP and .geno datasets were downloaded from the Dryad repository. The citations are listed below:
 
