@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import argparse
-import re
 
 from datastruct import Struct
 
@@ -23,27 +22,6 @@ def get_arguments():
     
     return args
     
-    
-def read_infile(infile):
-
-    columns = []
-    sampleIDs = []
-    
-    phylip = re.compile(r"^(\d+)\s+(\d+)\s*$")
-    
-    with open(infile) as fin:
-        for line in fin:
-            m = phylip.search(line)
-            if m:
-                header = line.strip()
-            else:
-                columns.append([x for x in line.strip().split()])
-        
-        for col in columns:
-            sampleIDs.append(col[0])
-    
-    return header, sampleIDs
-    
 def read_phylip(line):
 
     line = line.rstrip("\r\n")
@@ -52,13 +30,6 @@ def read_phylip(line):
     loc = ids_loci[1]
 
     return ids, loc, header
-    
-    
-def make_outfiles(Ids, indfile, snpfile, header, pattern, loci):
-
-    make_indfile(Ids, indfile, pattern)
-    make_snpfile(snpfile, header)
-            
 
 def make_indfile(ID, file, pattern):
 
@@ -92,7 +63,6 @@ def get_unique_identifiers(pattern, hit, number):
 args = get_arguments()
 
 unique_ids = dict()
-IDs = list()
 
 popnum = 1
 
