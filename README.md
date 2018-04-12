@@ -6,17 +6,29 @@ ________________________________________________________________________________
 Usage:
 
 ```
-phylip2eigenstrat.py -f [--infile] *.phylip -i [--ind <ind outfile>] *.ind -s [--snp <snp outfile>] *.snp
+phylip2eigenstrat.py -p [--phylip] *.phy -i [--ind <ind outfile>] *.ind -s [--snp <snp outfile>] *.snp [options]...
 ```
 
+Mandatory arguments:
 
-The only required command-line flag is -f. If -i and -s are not specified, default = out.ind, out.snp    
+[-p, --phylip - Input PHYLIP file from the same pyRAD run as the .geno file]  
+
+Optional arguments:  
+
+[-i, --ind - Specifies .ind output file; default = out.ind]  
+[-n, --snp - Specifies .snp output file; default = out.snp]  
+[-s, --start - Starting character for popID search pattern; default = 1]  
+[-e, --end - Last character for popID search pattern; default = 4]  
+
+
+The only required command-line flag is -p. If -i and -n are not specified, default = out.ind, out.snp    
 
 This script requires a phylip file as input to obtain the sample names and number of loci  
-The Phylip file should be from the same run as the .geno file to ensure the same number of loci  
+The Phylip file should be from the same pyRAD run as the .geno file to ensure the same number of loci  
 
-After running this script, you will need to go into the .ind file and change each "Pop" to a population code  
-The population identifier should be a unique string for each population.  
+The Phylip file also uses a REGEX pattern to determine population IDs in the .ind file  
+The characters used for the REGEX can be changed with the -s and -e options (default = 1-4)    
+
 
 AdmixTools and Eigensoft require a third input file that is produced in pyRAD: .geno  
 Please note that AdmixTools requires the three input files to have .geno, .snp, and .ind extensions.  
